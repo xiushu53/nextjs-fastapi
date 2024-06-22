@@ -1,4 +1,5 @@
 export const getNow = async () => {
-    const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/now`).then(d=>d.json())
+    console.log(`${process.env.NEXT_PUBLIC_PREFIX}${process.env.NEXT_PUBLIC_VERCEL_URL}/api/now`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_PREFIX}${process.env.NEXT_PUBLIC_VERCEL_URL}/api/now`).then(d=>d.json())
     return res.now
 }
